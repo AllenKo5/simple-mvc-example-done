@@ -19,6 +19,8 @@ const router = (app) => {
   app.get('/getName', controllers.getName);
   app.get('/findByName', controllers.searchName);
 
+  app.get('/page4', controllers.page4);
+
   // whenever someone goes to the site without a path (AKA the home page), call controllers.index
   // For example www.webpage.com
   app.get('/', controllers.index);
@@ -32,6 +34,9 @@ const router = (app) => {
 
   // When someone POSTS to /updateLast, call controllers.updateLast
   app.post('/updateLast', controllers.updateLast);
+
+  app.post('/setDog', controllers.setDog);
+  app.post('/searchDog', controllers.searchDog);
 };
 
 // export the router function
